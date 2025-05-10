@@ -11,7 +11,7 @@ fi
 space="$1"
 srv="$2"
 avail="$(df -h | awk '{print $4}')"
-if [ "$avail" -ge "$space" ]; then
+if [ "$avail" -le "$space" ]; then
 
 	echo " Disk is not having enough space to install $srv"
 else
